@@ -1,28 +1,21 @@
 # Examen BentoML
 
-Ce repertoire contient l'architecture basique afin de rendre l'évaluation pour l'examen BentoML.
+## Fonctionnement du projet
 
-Vous êtes libres d'ajouter d'autres dossiers ou fichiers si vous jugez utile de le faire.
+Ce projet utilise BentoML pour déployer un modèle de machine learning. Ce modèle a pour but de prédire la chance d'admission d'un étudiant dans une université.
 
-Voici comment est construit le dossier de rendu de l'examen:
+## Architecture du projet
 
-```bash       
-├── examen_bentoml          
-│   ├── data       
-│   │   ├── processed      
-│   │   └── raw           
-│   ├── models      
-│   ├── src       
-│   └── README.md
-```
+1. **Entraînement du modèle**: Les modèles de machine learning sont entraînés en utilisant la librarie scikit-learn.
+2. **Enregistrement du modèle**: Les modèles entraînés sont enregistrés dans un format compatible avec BentoML.
+3. **Création du service BentoML**: Un service BentoML est créé en définissant une classe qui hérite de `bentoml.Service`. Cette classe spécifie les artefacts du modèle et les API de prédiction.
+4. **Déploiement**: Le service BentoML est conteneurisé et déployé sur une infrastructure cloud ou sur des serveurs locaux.
+5. **Prédiction**: Les utilisateurs peuvent envoyer des requêtes HTTP au service déployé pour obtenir des prédictions en temps réel.
 
-Afin de pouvoir commencer le projet vous devez suivre les étapes suivantes:
+## Fichiers principaux
 
-- Forker le projet sur votre compte github
+- `prepare_date.py`: Script pour charger les données, de les nettoyer et de les diviser en un jeu d'entraînement et un jeu de test.
+- `service.py`: Définition du service BentoML et des API de prédiction.
+- `Dockerfile`: Fichier pour créer l'image Docker du service.
+- `README.md`: Documentation du projet.
 
-- Cloner le projet sur votre machine
-
-- Récuperer le jeu de données à partir du lien suivant: [Lien de téléchargement]( https://datascientest.s3-eu-west-1.amazonaws.com/examen_bentoml/admissions.csv)
-
-
-Bon travail!

@@ -2,3 +2,6 @@
 .DS_Store?
 /venv
 /clean_data.csv
+/bentoenv
+/data
+src/__pycache__/service.cpython-311.pyc
