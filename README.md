@@ -24,7 +24,7 @@ Ce projet utilise BentoML pour déployer un modèle de machine learning. Ce mod�
 1. Mettez-vous dans le dossier du projet
 cd examen_bentoml
 
-2. Executer la commande suivante pour créer l'environnement virtuel
+2. Executer la commande suivante pour créer l'environnement virtuel:
 virtualenv bentomlenv
 
 3. source bentomlenv/bin/activate
@@ -35,7 +35,7 @@ virtualenv bentomlenv
 
 6. bentoml containerize lr_service:latest
 
-7.  docker run --rm -p 3000:3000 lr_service:<tag>
+7. docker run --rm -p 3000:3000 lr_service:<tag>
 
 8. python src/test.py
 
