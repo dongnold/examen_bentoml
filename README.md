@@ -19,3 +19,25 @@ Ce projet utilise BentoML pour déployer un modèle de machine learning. Ce mod�
 - `Dockerfile`: Fichier pour créer l'image Docker du service.
 - `README.md`: Documentation du projet.
 
+## Instructions pour lancer le projet
+
+1. Mettez-vous dans le dossier du projet
+cd examen_bentoml
+
+2. Executer la commande suivante pour créer l'environnement virtuel
+virtualenv bentomlenv
+
+3. source bentomlenv/bin/activate
+
+4. pip3 install -r requirements.txt
+
+5. bentoml build
+
+6. bentoml containerize lr_service:latest
+
+7.  docker run --rm -p 3000:3000 lr_service:<tag>
+
+8. python src/test.py
+
+
+
